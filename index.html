@@ -6,6 +6,7 @@
 	<title>Personal Portfolio Website</title>
 	<link rel = "icon" href = "images/profile.png"  type = "image/x-icon">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
@@ -20,12 +21,12 @@
 		<div class="max-width">
 			<div class="logo"><a href="#">ポートフォ<span>リオ.</span></a></div>
 		     <ul class="menu">
-		     	<li><a href="#home" class="menu-btn">Home </a></li>
-		     	<li><a href="#about" class="menu-btn">About</a></li>
-		     	<li><a href="#services" class="menu-btn">Services</a></li>
-		     	<li><a href="#skills" class="menu-btn">Skills</a></li>
-		     	<li><a href="#teams" class="menu-btn">Connect</a></li>
-		     	<li><a href="#contact" class="menu-btn">Contact</a></li>
+		     	<li><a href="#home" class="menu-btn" data-text="Home">Home </a></li>
+		     	<li><a href="#about" class="menu-btn" data-text="About" >About</a></li>
+		     	<li><a href="#services" class="menu-btn" data-text="Services">Services</a></li>
+		     	<li><a href="#skills" class="menu-btn" data-text="Skills">Skills</a></li>
+		     	<li><a href="#teams" class="menu-btn" data-text="Connect">Connect</a></li>
+		     	<li><a href="#contact" class="menu-btn" data-text="Contact">Contact</a></li>
 		     </ul>
 		     <div class="menu-btn">
 		     	<i class="fas fa-bars"></i>
@@ -42,10 +43,16 @@
      			<div class="text-3">And I'm a <span class="typing">Gamer.</span></div>
      		</div>
      	</div>
+     	<div class="curve"></div>
      </section>
 
    <!-- about section start  -->
     <section class="about" id="about">
+    	     	     	    	     	<div class="wave1">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+</div>
      	<div class="max-width">
      		<h2 class="title">About Me</h2>
      		<div class="about-content">
@@ -59,11 +66,16 @@
      		  </div> 	
      		</div>
      	</div>
-     </section>
+       </section>
 
 
 <!-- service section start  -->
     <section class="services" id="services">
+    	     	<div class="wave">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+</div>
      	<div class="max-width">
      		<h2 class="title">My Services</h2>
      		<div class="serv-content">
@@ -85,12 +97,15 @@
      				<div class="box">
      					<i class='fas fa-code'></i>
      					<div class="text">Apps Design</div>
-     					<p>I can create programs for smartphones, tablets and computers. They work in a range of industries and across a number of platforms, including Apple iOS and macOS, Google Android, and Windows.</p>
+     					<p>I can create programs for smartphones, tablets and computers. They work in a range of industries and across a number of platforms.</p>
      				</div>
      			</div>		
      		</div>
      	</div>
+
      </section>
+
+     <div class="spacer layer1"></div>
 
 <!-- skills section start -->     
     <section class="skills" id="skills">
@@ -140,10 +155,12 @@
     	</div>
     </section>
 
+     <div class="spacer layer2 "></div>
+
     <!-- id section starts -->
     <section class="teams" id="teams">
     	<div class="max-width">
-    		<h2 class="title"> My Social and gaming Ids </h2>
+    		<h2 class="title"> My Socials </h2>
     		<div class="carousel owl-carousel">
   			<div class="card">
     			   <div class="box" id="val">
@@ -194,10 +211,13 @@
                          Id: 576170381</p>
     			   </div>
     			</div>
+    		</div>
     			</div>
     		</div>
     	</div>
+    	
     </section>
+        	         <div class="spacer layer2 flip"></div>
 
   <!-- contact section start -->
   <section class="contact" id="contact">
@@ -265,5 +285,14 @@
 
    <script src="script.js"></script>
 
+   <script type="text/javascript" src="vanilla-tilt.js"></script>
+   <script>
+   	VanillaTilt.init(document.querySelectorAll(".card"), {
+		max: 25,
+		speed: 400,
+		glare: true,
+		"max-glare": 1,
+	});
+   </script>
 </body>
 </html>
