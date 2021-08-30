@@ -654,12 +654,14 @@ footer span a:hover{
     }
    
     .navbar .menu{
-       position: fixed;
+       position: absolute;
+       display: flex;
+       flex-direction: column;
        height: 100vh;
        width: 100%;
        left: -100%;
        top: 0;
-       background: rgba(0,0,0,0.9);
+       background: rgba(0,0,0,0.95);
        text-align: center;
        padding-top: 80px;
        transition: all 0.3s ease;
@@ -671,10 +673,42 @@ footer span a:hover{
     	display: block;
     }
     .navbar .menu li a{
-    	display: inline-block;
+    	position: relative;
+    	display: block;
+    	text-decoration: none;
+    	text-align: center;
+    	text-transform: uppercase;
+    	color: #fff;
     	margin: 20px 0;
-    	font-size: 25px;
+    	font-size: 2em;
+    	font-weight: 700;
+    	transition: 0.5s;
     }
+    .navbar .menu li a:hover{
+    	color: rgba(255, 255, 255, 0.1);
+    }
+    .navbar .menu li a::before {
+    	content: attr(data-text);
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	transform: translate(-50%,-50%);
+    	font-size: 0.35em;
+    	color: crimson;
+    	text-shadow: 0 0 10px crimson,
+    	0 0 30px crimson,
+    	0 0 80px crimson;
+    	font-weight: 500;
+    	letter-spacing: 40px;
+    	white-space: nowrap;
+    	opacity: 0;
+    	transition: 0.5s;
+    }
+    .navbar .menu li a:hover::before {
+    	opacity: 1;
+    	letter-spacing: 6px;
+    }
+
     .home .home-content .text-2{
 	     font-size: 70 px;
      }
