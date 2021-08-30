@@ -106,7 +106,7 @@ html{
 /* home section styling */
 .home{
 	display: flex;
-	background: url("images/bnn.jpg") no-repeat center;
+	/* background: url("images/bnn.jpg") no-repeat center; */
 	background-size: cover;
 	height: 100vh;
 	color: #fff;
